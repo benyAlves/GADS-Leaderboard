@@ -6,14 +6,18 @@
     app:startDestination="@id/FirstFragment">
 
     <fragment
+        android:id="@+id/LearningLeadersFragment"
+        android:name="mz.co.projectx.gadsleaderboard.learningleaders.LearningLeadersFragment"
+        android:label="Learners"
+        tools:layout="@layout/learning_leaders_fragment">
+    </fragment>
+
+    <fragment
         android:id="@+id/FirstFragment"
         android:name="mz.co.projectx.gadsleaderboard.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -21,8 +25,5 @@
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
