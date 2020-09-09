@@ -1,12 +1,16 @@
 package mz.co.projectx.gadsleaderboard.data
 
 import mz.co.projectx.gadsleaderboard.model.LearnLeader
-import java.lang.Exception
+import mz.co.projectx.gadsleaderboard.model.SkillLeader
 
-class DataRepository(private val retrofitClient: RetrofitClient): DataService{
+class DataRepository(private val retrofitClient: RetrofitClient): DataService {
 
     override suspend fun getLearningLeaders(): List<LearnLeader> {
-        return  retrofitClient.getLearningLeaders()
+        return retrofitClient.getLearningLeaders()
+    }
+
+    override suspend fun getSkillLeaders(): List<SkillLeader> {
+        return retrofitClient.getSkillLeaders()
     }
 
 }

@@ -21,9 +21,9 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="mz.co.projectx.gadsleaderboard.SecondFragment"
+        android:name="mz.co.projectx.gadsleaderboard.skillleaders.SkillLeadersFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_skill_leaders">
 
     </fragment>
 </navigation>

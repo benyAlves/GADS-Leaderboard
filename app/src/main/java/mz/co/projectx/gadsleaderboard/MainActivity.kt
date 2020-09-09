@@ -2,10 +2,9 @@ package mz.co.projectx.gadsleaderboard
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupWithNavController
-import kotlinx.android.synthetic.main.activity_main.*
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.fragment_first.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,9 +12,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val navController = findNavController(R.id.nav_host_fragment)
-        val appBarConfiguration = AppBarConfiguration(navController.graph)
-        toolbar.setupWithNavController(navController, appBarConfiguration)
+        val fragmentAdapter = FragmentAdapter(this)
+        pager.adapter = fragmentAdapter
+
+        TabLayoutMediator(
+            tabLayout,
+            pager,
+            TabLayoutMediator.TabConfigurationStrategy() { tab: TabLayout.Tab, position: Int ->
+                when (position) {
+                    0 -> tab.text = "Learning Leaders"
+                    else -> tab.text = "Skill IQ Leaders"
+                }
+            }).attach()
 
     }
 

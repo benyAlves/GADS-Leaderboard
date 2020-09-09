@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GADS Leaderboard</string>
+    <string name="app_name">Leaderboard</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -11,4 +11,9 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="learning_leader_badge">Learning leader badge</string>
     <string name="error_loading_try_again">Error loading, try again</string>
+    <string name="title_activity_splash">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="launch_gads_image">Launch Gads image</string>
+    <string name="submit">Submit</string>
 </resources>
