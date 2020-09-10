@@ -13,4 +13,13 @@ class DataRepository(private val retrofitClient: RetrofitClient): DataService {
         return retrofitClient.getSkillLeaders()
     }
 
+    override suspend fun submitForm(
+        firstName: String,
+        lastName: String,
+        email: String,
+        link: String
+    ) {
+        retrofitClient.submitForm(firstName, lastName, email, link)
+    }
+
 }

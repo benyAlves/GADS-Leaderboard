@@ -1,10 +1,14 @@
 package mz.co.projectx.gadsleaderboard
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_first.*
+import kotlinx.android.synthetic.main.fragment_first.tabLayout
+import mz.co.projectx.gadsleaderboard.form.SubmissionFormActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +29,9 @@ class MainActivity : AppCompatActivity() {
                 }
             }).attach()
 
+        buttonSubmit.setOnClickListener {
+            startActivity(Intent(this, SubmissionFormActivity::class.java))
+        }
     }
 
 }
