@@ -24,7 +24,7 @@
                 android:layout_marginBottom="32dp">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/imageViewUpButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -32,6 +32,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/gads_logo"
+                    android:contentDescription="@string/back_button"
                     app:layout_constraintVertical_bias="0.615" />
 
                 <ImageView
@@ -41,7 +42,8 @@
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/gads_logo"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    android:contentDescription="@string/launch_gads_image"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewUpButton"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

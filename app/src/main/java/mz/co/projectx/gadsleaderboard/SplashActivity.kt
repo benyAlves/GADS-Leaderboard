@@ -2,8 +2,9 @@ package mz.co.projectx.gadsleaderboard
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.coroutines.*
+import java.util.concurrent.TimeUnit
 
 
 class SplashActivity : AppCompatActivity() {
@@ -13,12 +14,14 @@ class SplashActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_splash)
 
-        val handler = Handler()
-        handler.postDelayed(Runnable {
-            val intent = Intent(this@SplashActivity, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }, 2000)
+        CoroutineScope(Dispatchers.IO).launch {
+            delay(TimeUnit.SECONDS.toMillis(3))
+            withContext(Dispatchers.Main) {
+                val intent = Intent(this@SplashActivity, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
 
     }
 
