@@ -29,6 +29,7 @@ class SubmissionFormActivity : AppCompatActivity() {
             DataRepository(getNetworkServiceForm())
         )
     }
+    private val builder: AlertDialog.Builder = AlertDialog.Builder(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,7 +67,6 @@ class SubmissionFormActivity : AppCompatActivity() {
 
 
     private fun showConfirmDialog() {
-        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         val confirmDialog: View = layoutInflater.inflate(R.layout.alert_dialog_confirm, null)
         builder.setView(confirmDialog)
         builder.setCancelable(false)
@@ -102,7 +102,6 @@ class SubmissionFormActivity : AppCompatActivity() {
     }
 
     private fun showResultDialog(message: String, drawable: Drawable) {
-        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         val submissionResult: View = layoutInflater.inflate(R.layout.submission_result, null)
         builder.setView(submissionResult)
         val imageView = submissionResult.findViewById<ImageView>(R.id.imageViewResult)
